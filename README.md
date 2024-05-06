@@ -13,3 +13,14 @@ Client 3
 
 ## 2.2. Modifying the websocket port
 Iya kedua file menggunakan websocket protocol yang sama. Hal tersebut terlihat pada listener dan client builder pada server dan client yang terdapat koneksi port yang dituju yaitu port 8080. Kedua file juga menggunakan tokio_websocket untuk websocket untuk menghandle komunikasi.
+
+## 2.3. Small changes. Add some information to client
+#### Server
+![](msc/server2.png)
+#### Client
+Client 1
+![](msc/clientinfo1.png)
+Client 2
+![](msc/clientinfo2.png)
+
+Untuk menambahkan informasi terkait client pengirim maka diperlukan modifikasi pada bcast_tx.send() pada server. Hal tersebut karena server yang menerima alamat pengirim serta memiliki kemampuan untuk menentukan apa yang akan dikirimkan kembali kepada setiap client.
